@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MasterCardC2PMerchantRegistrationService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">clicktopay-reference-app</a> &gt; <a href="index.source.html" class="el_package">com.mastercard.mcs.clicktopay.service</a> &gt; <span class="el_source">MasterCardC2PMerchantRegistrationService.java</span></div><h1>MasterCardC2PMerchantRegistrationService.java</h1><pre class="source lang-java linenums">package com.mastercard.mcs.clicktopay.service;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.mastercard.mcs.clicktopay.constants.AppConstants;
+import com.mcs.clicktopay.merchantregistration.api.MerchantRegistrationApi;
+import com.mcs.clicktopay.merchantregistration.invoker.ApiClient;
+import com.mcs.clicktopay.merchantregistration.invoker.ApiException;
+import com.mcs.clicktopay.merchantregistration.invoker.ApiResponse;
+import com.mcs.clicktopay.merchantregistration.model.DpaAddUpdateRequest;
+import com.mcs.clicktopay.merchantregistration.model.DpaAddUpdateResponse;
+import com.mcs.clicktopay.merchantregistration.model.DpaBatchStatus;
+
+@Service
+<span class="fc" id="L21">public class MasterCardC2PMerchantRegistrationService extends MasterCardCommonService {</span>
+
+    private static final String ONBOARDING = &quot;/onboarding&quot;;
+
+    protected MerchantRegistrationApi createMerchantRegistrationApi(ApiClient apiClient) {
+<span class="fc" id="L26">        return new MerchantRegistrationApi(apiClient);</span>
+    }
+
+    public ResponseEntity&lt;Object&gt; submitDpaBatch(String srcClientId, DpaAddUpdateRequest requestBody,
+            String correlationId) throws IOException, GeneralSecurityException {
+        try {
+<span class="fc bfc" id="L32" title="All 2 branches covered.">            String basePath = production ? productionBaseUrl : sandboxBaseUrl;</span>
+            
+<span class="fc" id="L34">            ApiClient apiClient = getMerchantApiClient();</span>
+<span class="fc" id="L35">            apiClient.setBasePath(basePath + ONBOARDING);</span>
+
+<span class="fc" id="L37">            MerchantRegistrationApi merchantRegistrationApi = createMerchantRegistrationApi(apiClient);</span>
+            
+            // Use WithHttpInfo to get ApiResponse (body + headers + status)
+<span class="fc" id="L40">            ApiResponse&lt;DpaAddUpdateResponse&gt; submitBatchApiResponse = merchantRegistrationApi.bulkAddUpdateDpaWithHttpInfo(</span>
+                    correlationId, srcClientId, requestBody);
+
+<span class="fc" id="L43">            Map&lt;String, Object&gt; result = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L44">            result.put(AppConstants.KEY_BODY, submitBatchApiResponse.getData());</span>
+<span class="fc" id="L45">            result.put(AppConstants.KEY_HEADERS, submitBatchApiResponse.getHeaders());</span>
+<span class="fc" id="L46">            result.put(AppConstants.KEY_STATUS_CODE, submitBatchApiResponse.getStatusCode());</span>
+
+<span class="fc" id="L48">            return ResponseEntity.status(submitBatchApiResponse.getStatusCode()).body(result);</span>
+<span class="fc" id="L49">        } catch (ApiException e) {</span>
+            // If ApiException provides headers, extract them; else provide error only
+<span class="fc" id="L51">            Map&lt;String, Object&gt; error = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L52">            error.put(AppConstants.KEY_BODY, e.getResponseBody());</span>
+<span class="fc" id="L53">            error.put(AppConstants.KEY_HEADERS, e.getResponseHeaders());</span>
+<span class="fc" id="L54">            error.put(AppConstants.KEY_STATUS_CODE, e.getCode());</span>
+
+<span class="fc" id="L56">            return ResponseEntity.status(e.getCode()).body(error);</span>
+        }
+    }
+
+    public ResponseEntity&lt;Object&gt; getDpaBatchStatus(String srcClientId, String batchId, String correlationId)
+            throws IOException, GeneralSecurityException {
+        try {
+<span class="fc bfc" id="L63" title="All 2 branches covered.">            String basePath = production ? productionBaseUrl : sandboxBaseUrl;</span>
+
+<span class="fc" id="L65">            ApiClient apiClient = getMerchantApiClient();</span>
+<span class="fc" id="L66">            apiClient.setBasePath(basePath + ONBOARDING);</span>
+
+<span class="fc" id="L68">            MerchantRegistrationApi merchantRegistrationApi = createMerchantRegistrationApi(apiClient);</span>
+            
+            // Use WithHttpInfo to get headers and status if available
+<span class="fc" id="L71">            ApiResponse&lt;DpaBatchStatus&gt; dpaBatchStatusResponse = merchantRegistrationApi.getDpaBatchStatusWithHttpInfo(</span>
+                    correlationId, srcClientId, batchId);
+
+<span class="fc" id="L74">            Map&lt;String, Object&gt; result = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L75">            result.put(AppConstants.KEY_BODY, dpaBatchStatusResponse.getData());</span>
+<span class="fc" id="L76">            result.put(AppConstants.KEY_HEADERS, dpaBatchStatusResponse.getHeaders());</span>
+<span class="fc" id="L77">            result.put(AppConstants.KEY_STATUS_CODE, dpaBatchStatusResponse.getStatusCode());</span>
+
+<span class="fc" id="L79">            return ResponseEntity.status(dpaBatchStatusResponse.getStatusCode()).body(result);</span>
+<span class="fc" id="L80">        } catch (ApiException e) {</span>
+<span class="fc" id="L81">            Map&lt;String, Object&gt; error = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L82">            error.put(AppConstants.KEY_BODY, e.getResponseBody());</span>
+<span class="fc" id="L83">            error.put(AppConstants.KEY_HEADERS, e.getResponseHeaders());</span>
+<span class="fc" id="L84">            error.put(AppConstants.KEY_STATUS_CODE, e.getCode());</span>
+
+<span class="fc" id="L86">            return ResponseEntity.status(e.getCode()).body(error);</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

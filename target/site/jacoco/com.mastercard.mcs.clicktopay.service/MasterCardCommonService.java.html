@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MasterCardCommonService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">clicktopay-reference-app</a> &gt; <a href="index.source.html" class="el_package">com.mastercard.mcs.clicktopay.service</a> &gt; <span class="el_source">MasterCardCommonService.java</span></div><h1>MasterCardCommonService.java</h1><pre class="source lang-java linenums">package com.mastercard.mcs.clicktopay.service;
+
+import java.io.File;
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.security.PrivateKey;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
+import org.springframework.util.ResourceUtils;
+
+import com.mastercard.developer.encryption.EncryptionException;
+import com.mastercard.developer.encryption.JweConfig;
+import com.mastercard.developer.encryption.JweConfigBuilder;
+import com.mastercard.developer.interceptors.OkHttpEncryptionInterceptor;
+import com.mastercard.developer.interceptors.OkHttpOAuth1Interceptor;
+import com.mastercard.developer.utils.AuthenticationUtils;
+import com.mastercard.developer.utils.EncryptionUtils;
+
+import okhttp3.OkHttpClient;
+
+@Service
+<span class="fc" id="L26">public class MasterCardCommonService {</span>
+
+<span class="fc" id="L28">	private static final Logger LOGGER = LoggerFactory.getLogger(MasterCardCommonService.class);</span>
+
+	@Value(&quot;${production}&quot;)
+	boolean production;
+
+	@Value(&quot;${srcDpaId}&quot;)
+    public String srcDpaId;
+
+	@Value(&quot;${signing.consumerKey:defaultValue}&quot;)
+	public String consumerKey;
+
+	@Value(&quot;${signing.pkcs12KeyFile:defaultValue}&quot;)
+	private String pkcs12KeyFile;
+
+	@Value(&quot;${signing.keyAlias:defaultValue}&quot;)
+	private String signingKeyAlias;
+
+	@Value(&quot;${signing.keyPassword:defaultValue}&quot;)
+	private String signingKeyPassword;
+
+	@Value(&quot;${mastercard.encryption.pkcs12KeyFile:defaultValue}&quot;)
+	public String mastercardEncryptionPkcs12KeyFile;
+
+	@Value(&quot;${mastercard.encryption.keyAlias:defaultValue}&quot;)
+	public String mastercardEncryptionKeyAlias;
+
+	@Value(&quot;${mastercard.encryption.keyPassword:defaultValue}&quot;)
+	public String mastercardEncryptionKeyPassword;
+
+	@Value(&quot;${mastercard.api.base-url.sandbox:defaultValue}&quot;)
+	public String sandboxBaseUrl;
+
+	@Value(&quot;${mastercard.api.base-url.production:defaultValue}&quot;)
+	public String productionBaseUrl;
+
+	private JweConfig decryptionConfig; // Configuration defined by library
+
+	PrivateKey getSigningKey() throws IOException, GeneralSecurityException {
+<span class="fc" id="L66">		File keyFile = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX + pkcs12KeyFile);</span>
+<span class="fc" id="L67">		LOGGER.debug(&quot;Loading signing key from file: {}&quot;, keyFile.getAbsolutePath());</span>
+
+<span class="fc" id="L69">		return AuthenticationUtils.loadSigningKey(</span>
+<span class="fc" id="L70">				keyFile.getPath(),</span>
+				signingKeyAlias,
+				signingKeyPassword);
+	}
+
+	protected com.mcs.clicktopay.merchantregistration.invoker.ApiClient getMerchantApiClient()
+			throws IOException, GeneralSecurityException {
+
+<span class="fc bfc" id="L78" title="All 2 branches covered.">		String basePath = production ? productionBaseUrl : sandboxBaseUrl;</span>
+
+<span class="fc" id="L80">		com.mcs.clicktopay.merchantregistration.invoker.ApiClient apiClient = new com.mcs.clicktopay.merchantregistration.invoker.ApiClient();</span>
+
+<span class="fc" id="L82">		apiClient.setBasePath(basePath + &quot;/onboarding&quot;);</span>
+
+<span class="fc" id="L84">		OkHttpClient client = apiClient.getHttpClient()</span>
+<span class="fc" id="L85">				.newBuilder()</span>
+<span class="fc" id="L86">				.addInterceptor(new OkHttpOAuth1Interceptor(consumerKey, getSigningKey()))</span>
+<span class="fc" id="L87">				.build();</span>
+<span class="fc" id="L88">		apiClient.setHttpClient(client);</span>
+
+<span class="fc" id="L90">		return apiClient;</span>
+	}
+
+	protected com.mcs.clicktopay.confirmations.invoker.ApiClient getConfirmationApiClient()
+			throws IOException, GeneralSecurityException {
+
+<span class="fc bfc" id="L96" title="All 2 branches covered.">		String basePath = production ? productionBaseUrl : sandboxBaseUrl;</span>
+
+<span class="fc" id="L98">		com.mcs.clicktopay.confirmations.invoker.ApiClient apiClient = new com.mcs.clicktopay.confirmations.invoker.ApiClient();</span>
+
+<span class="fc" id="L100">		apiClient.setBasePath(basePath + &quot;/api&quot;);</span>
+
+<span class="fc" id="L102">		OkHttpClient client = apiClient.getHttpClient()</span>
+<span class="fc" id="L103">				.newBuilder()</span>
+<span class="fc" id="L104">				.addInterceptor(new OkHttpOAuth1Interceptor(consumerKey, getSigningKey()))</span>
+<span class="fc" id="L105">				.build();</span>
+<span class="fc" id="L106">		apiClient.setHttpClient(client);</span>
+<span class="fc" id="L107">		return apiClient;</span>
+	}
+
+	protected com.mcs.clicktopay.checkout.invoker.ApiClient getCheckoutApiClient()
+			throws IOException, GeneralSecurityException, EncryptionException {
+
+<span class="fc bfc" id="L113" title="All 2 branches covered.">		String basePath = production ? productionBaseUrl : sandboxBaseUrl;</span>
+
+<span class="fc" id="L115">		com.mcs.clicktopay.checkout.invoker.ApiClient apiClient = new com.mcs.clicktopay.checkout.invoker.ApiClient();</span>
+
+<span class="fc" id="L117">		apiClient.setBasePath(basePath + &quot;/api/digital/payments&quot;);</span>
+
+<span class="fc" id="L119">		OkHttpClient client = apiClient.getHttpClient()</span>
+<span class="fc" id="L120">				.newBuilder()</span>
+<span class="fc" id="L121">				.addInterceptor(OkHttpEncryptionInterceptor.from(getDecryptionConfig()))</span>
+<span class="fc" id="L122">				.addInterceptor(new OkHttpOAuth1Interceptor(consumerKey, getSigningKey()))</span>
+<span class="fc" id="L123">				.build();</span>
+<span class="fc" id="L124">		apiClient.setHttpClient(client);</span>
+		
+<span class="fc" id="L126">		return apiClient;</span>
+
+	}
+
+	public JweConfig getDecryptionConfig() throws GeneralSecurityException, IOException, EncryptionException {
+<span class="fc bfc" id="L131" title="All 2 branches covered.">		if (ObjectUtils.isEmpty(decryptionConfig)) {</span>
+<span class="fc" id="L132">			File decryptionCert = ResourceUtils.getFile(&quot;classpath:&quot;+mastercardEncryptionPkcs12KeyFile);</span>
+<span class="fc" id="L133">			PrivateKey decryptionKey = EncryptionUtils.loadDecryptionKey(decryptionCert.getPath(),</span>
+					mastercardEncryptionKeyAlias, mastercardEncryptionKeyPassword);
+<span class="fc" id="L135">			decryptionConfig = JweConfigBuilder.aJweEncryptionConfig()</span>
+<span class="fc" id="L136">					.withEncryptionPath(&quot;undefined&quot;, &quot;undefined&quot;)</span>
+<span class="fc" id="L137">					.withDecryptionKey(decryptionKey)</span>
+<span class="fc" id="L138">					.withDecryptionPath(&quot;$.encryptedPayload&quot;, &quot;$&quot;)</span>
+<span class="fc" id="L139">					.withEncryptedValueFieldName(&quot;encryptedPayload&quot;)</span>
+<span class="fc" id="L140">					.build();</span>
+		}
+
+<span class="fc" id="L143">		return decryptionConfig;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

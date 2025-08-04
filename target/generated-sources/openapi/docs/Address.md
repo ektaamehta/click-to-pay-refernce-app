@@ -1,0 +1,23 @@
+
+
+# Address
+
+
+## Properties
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**addressId** | **String** | Identifier used to point to the address. |  [optional] |
+|**name** | **String** | Name of the customer. |  [optional] |
+|**line1** | **String** | Address line 1. |  [optional] |
+|**line2** | **String** | Address line 2. |  [optional] |
+|**line3** | **String** | Address line 3 |  [optional] |
+|**city** | **String** | Address of city. |  [optional] |
+|**state** | **String** | Address of state |  [optional] |
+|**countryCode** | **String** | ISO 3166 alpha 2 country code |  [optional] |
+|**zip** | **String** | The postal code (for example, zipcode in the U.S.) |  [optional] |
+|**createTime** | **String** | Time in UTC |  [optional] |
+|**lastUsedTime** | **String** | Time in UTC |  [optional] |
+
+
+

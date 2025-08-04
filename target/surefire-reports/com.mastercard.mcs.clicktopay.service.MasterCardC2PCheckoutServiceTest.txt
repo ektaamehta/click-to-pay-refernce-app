@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mastercard.mcs.clicktopay.service.MasterCardC2PCheckoutServiceTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.256 s -- in com.mastercard.mcs.clicktopay.service.MasterCardC2PCheckoutServiceTest

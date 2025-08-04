@@ -1,0 +1,10 @@
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/ClickToPayReferenceApplicationTest.java
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/controller/CheckoutControllerTest.java
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/controller/ConfigControllerTest.java
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/controller/ConfirmationControllerTest.java
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/controller/MerchantRegistrationControllerTest.java
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/exception/GlobalExceptionHandlerTest.java
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/service/MasterCardC2PCheckoutServiceTest.java
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/service/MasterCardC2PConfirmationServiceTest.java
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/service/MasterCardC2PMerchantRegistrationServiceTest.java
+/workspaces/click-to-pay-refernce-app/src/test/java/com/mastercard/mcs/clicktopay/service/MasterCardCommonServiceTest.java

@@ -1,0 +1,442 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.controller,CheckoutController,0,21,0,0,0,6,0,2,0,2
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.controller,MerchantRegistrationController,0,48,0,8,0,11,0,7,0,3
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.controller,ConfigController,0,21,0,0,0,5,0,2,0,2
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.controller,ConfirmationController,0,16,0,0,0,5,0,2,0,2
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker.auth,HttpBasicAuth,44,0,8,0,13,0,10,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker.auth,ApiKeyAuth,76,9,10,0,20,4,12,1,7,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker.auth,HttpBearerAuth,52,6,6,0,11,3,9,1,6,1
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.service,MasterCardC2PMerchantRegistrationService,0,180,0,4,0,34,0,6,0,4
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.service,MasterCardC2PConfirmationService,0,82,0,0,0,17,0,4,0,4
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.service,MasterCardCommonService,0,174,0,8,0,44,0,11,0,7
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.service,MasterCardC2PCheckoutService,0,251,0,6,0,51,0,6,0,3
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.service,MasterCardC2PCheckoutService.new TypeToken() {...},0,6,0,0,0,1,0,1,0,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,GzipRequestInterceptor.new RequestBody() {...},27,0,0,0,5,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,GzipRequestInterceptor.new RequestBody() {...},28,0,0,0,7,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ServerVariable,15,0,0,0,6,0,1,0,1,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,JSON,93,310,8,0,31,61,15,3,11,3
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,StringUtil,101,0,18,0,22,0,13,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ProgressRequestBody.new ForwardingSink() {...},51,0,4,0,9,0,4,0,2,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ApiClient.new Interceptor() {...},28,6,2,0,8,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ApiClient.new Callback() {...},65,0,0,0,13,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,JSON.DateTypeAdapter,74,3,8,0,23,1,8,1,4,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ApiClient.new HostnameVerifier() {...},8,0,0,0,2,0,2,0,2,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ApiClient.new X509TrustManager() {...},11,0,0,0,4,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,JSON.LocalDateTypeAdapter,36,10,4,0,11,5,5,2,3,2
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,Configuration,13,0,0,0,5,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,JSON.ByteArrayAdapter,32,3,4,0,10,1,4,1,2,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ApiException,110,41,0,0,18,13,8,5,8,5
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ProgressResponseBody,37,0,2,0,10,0,6,0,5,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ServerConfiguration,66,12,10,0,13,5,7,1,2,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,JSON.SqlDateTypeAdapter,72,3,8,0,21,1,8,1,4,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ApiResponse,27,0,0,0,10,0,5,0,5,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,JSON.OffsetDateTimeTypeAdapter,49,10,6,0,13,5,6,2,3,2
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,GzipRequestInterceptor,57,0,4,0,13,0,6,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ApiClient,1999,159,247,1,436,37,197,10,73,10
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,Pair,45,0,6,0,19,0,9,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ProgressResponseBody.new ForwardingSource() {...},46,0,4,0,6,0,4,0,2,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker,ProgressRequestBody,35,0,0,0,11,0,5,0,5,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.api,DefaultApi,181,6,12,0,47,3,18,1,12,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ApiClient,2041,168,251,1,445,38,202,10,76,10
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,JSON,93,244,8,0,31,50,15,3,11,3
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ApiClient.new Callback() {...},65,0,0,0,13,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ApiClient.new Interceptor() {...},28,6,2,0,8,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,JSON.LocalDateTypeAdapter,36,10,4,0,11,5,5,2,3,2
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ApiClient.new X509TrustManager() {...},11,0,0,0,4,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ApiClient.new HostnameVerifier() {...},8,0,0,0,2,0,2,0,2,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,JSON.ByteArrayAdapter,32,3,4,0,10,1,4,1,2,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,JSON.OffsetDateTimeTypeAdapter,49,10,6,0,13,5,6,2,3,2
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ProgressResponseBody,37,0,2,0,10,0,6,0,5,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,GzipRequestInterceptor,57,0,4,0,13,0,6,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,StringUtil,101,0,18,0,22,0,13,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ServerVariable,15,0,0,0,6,0,1,0,1,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ProgressRequestBody.new ForwardingSink() {...},51,0,4,0,9,0,4,0,2,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ServerConfiguration,66,12,10,0,13,5,7,1,2,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,GzipRequestInterceptor.new RequestBody() {...},27,0,0,0,5,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,GzipRequestInterceptor.new RequestBody() {...},28,0,0,0,7,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,JSON.SqlDateTypeAdapter,72,3,8,0,21,1,8,1,4,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,JSON.DateTypeAdapter,74,3,8,0,23,1,8,1,4,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ApiResponse,27,0,0,0,10,0,5,0,5,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,Configuration,13,0,0,0,5,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ProgressResponseBody.new ForwardingSource() {...},46,0,4,0,6,0,4,0,2,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ApiException,151,0,0,0,31,0,13,0,13,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,Pair,45,0,6,0,19,0,9,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.invoker,ProgressRequestBody,35,0,0,0,11,0,5,0,5,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker.auth,ApiKeyAuth,76,9,10,0,20,4,12,1,7,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker.auth,HttpBasicAuth,44,0,8,0,13,0,10,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.invoker.auth,HttpBearerAuth,58,0,6,0,14,0,10,0,7,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Unauthorized.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,JoseHeader.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PaymentToken.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestError.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedAddress,977,0,114,0,160,0,105,0,48,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Unauthorized,431,0,44,0,89,0,47,0,25,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConsumerIdentityType.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestError.ReasonEnum,173,0,4,0,30,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PhoneNumber.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,IdentityProvider.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestErrorErrordetailInner.ReasonEnum,96,0,4,0,19,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ErrorErrordetailInner.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,AssuranceData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerErrorErrordetailInner.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConfirmationRequest,501,48,56,0,87,14,56,2,28,2
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,AddressPreference,68,0,4,0,15,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DCF.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerError,431,0,44,0,89,0,47,0,25,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ErrorErrordetailInner.ReasonEnum,96,0,4,0,19,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ComplianceSettings,400,0,48,0,85,0,51,0,27,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerErrorErrordetailInner.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedCard.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerErrorErrordetailInner.SourceTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DynamicDataType,68,0,4,0,15,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PaymentToken.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PhoneNumber.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PaymentCardType.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,SrcTokenResultsDataObject.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,TransactionType,89,0,4,0,18,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,TransactionType.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedConsumerIdentity.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestErrorErrordetailInner.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutRequest.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestErrorErrordetailInner.SourceTypeEnum,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConsumerIdentityType,75,0,4,0,16,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Forbidden,431,0,44,0,89,0,47,0,25,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CardPendingEvent,75,0,4,0,16,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ComplianceSettings.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConfirmationData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,TransactionAmount.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,SrcTokenResultsDataObject,279,0,34,0,55,0,35,0,18,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConsumerStatus.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutResponseJWS.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DpaTransactionOptions.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ThreeDsPreference,75,0,4,0,16,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Error.ReasonEnum,173,0,4,0,30,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Card.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Forbidden.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerError.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DynamicData,358,0,40,0,69,0,41,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Forbidden.ReasonEnum,173,0,4,0,30,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,UnauthorizedErrordetailInner.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ForbiddenErrordetailInner.SourceTypeEnum,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ForbiddenErrordetailInner,458,0,54,0,83,0,51,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Error.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ComplianceSettings.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerErrorErrordetailInner.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ThreeDsPreference.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedConsumerIdentity.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedConsumer.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Forbidden.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ErrorErrordetailInner.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Payload.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConsumerStatus,75,0,4,0,16,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DynamicDataType.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DigitalCardStatus.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutResponsePayload.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestErrorErrordetailInner,458,0,54,0,83,0,51,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedConsumerIdentity,337,0,34,0,70,0,38,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DigitalCardFeatures.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PayloadTypeIndicator.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DynamicData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Card,760,0,88,0,130,0,83,0,39,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,JoseHeader,436,0,46,0,81,0,47,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConfirmationData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestError.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Address,882,0,106,0,145,0,98,0,45,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ForbiddenErrordetailInner.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutResponseBody.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CommunicationConsent,373,0,30,0,83,0,45,0,30,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Payload.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,AssuranceData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DigitalCardData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConfirmationData,801,0,86,0,142,0,85,0,42,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Error.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Consent.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,UnauthorizedErrordetailInner.ReasonEnum,96,0,4,0,19,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ForbiddenErrordetailInner.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PaymentToken,374,0,42,0,70,0,42,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedAddress.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedConsumer,1058,0,120,0,180,0,114,0,54,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Card.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CommunicationConsent.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DigitalCardData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DynamicData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Payload,770,0,92,0,145,0,91,0,45,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedCard.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PayloadTypeIndicator,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ForbiddenErrordetailInner.ReasonEnum,96,0,4,0,19,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestErrorErrordetailInner.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,UnauthorizedErrordetailInner.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutResponseJWS.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PaymentOptions.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Consent.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutResponsePayload.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerError.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Forbidden.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DigitalCardFeatures.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DCF.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CommunicationConsent.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DigitalCardStatus,89,0,4,0,18,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Unauthorized.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutRequest.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,AssuranceData,480,0,58,0,85,0,56,0,27,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,TransactionAmount.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestErrorErrordetailInner.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DigitalCardFeatures,489,0,54,0,91,0,57,0,30,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerErrorErrordetailInner,458,0,54,0,83,0,51,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Error.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Address.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PaymentOptions.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConfirmationRequest.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestError.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Address.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutResponseBody.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Error,431,0,44,0,89,0,47,0,25,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PaymentCardType,89,0,4,0,18,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Consent,374,0,42,0,70,0,42,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DigitalCardData,555,0,62,0,105,0,65,0,34,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DpaTransactionOptions,1227,0,134,0,230,0,139,0,72,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutResponseBody,196,0,24,0,45,0,27,0,15,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ErrorErrordetailInner.SourceTypeEnum,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerErrorErrordetailInner.SourceTypeEnum,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerErrorErrordetailInner.ReasonEnum,96,0,4,0,19,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedCard,1328,0,144,0,232,0,139,0,67,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestError,431,0,44,0,89,0,47,0,25,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Unauthorized.ReasonEnum,173,0,4,0,30,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,UnauthorizedErrordetailInner.SourceTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ErrorErrordetailInner.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ErrorErrordetailInner.SourceTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,UnauthorizedErrordetailInner.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,AbstractOpenApiSchema,171,0,20,0,35,0,21,0,11,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,TransactionAmount,282,0,28,0,59,0,32,0,18,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CardPendingEvent.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PhoneNumber,302,0,30,0,61,0,33,0,18,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,EventHistory.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ForbiddenErrordetailInner.SourceTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,PaymentOptions,234,0,26,0,53,0,31,0,18,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DpaTransactionOptions.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,Unauthorized.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,AddressPreference.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedConsumer.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,UnauthorizedErrordetailInner,458,0,54,0,83,0,51,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutRequest,431,0,42,0,82,0,45,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,BadRequestErrorErrordetailInner.SourceTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ForbiddenErrordetailInner.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,EventHistory,614,0,74,0,105,0,70,0,33,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ErrorErrordetailInner,458,0,54,0,83,0,51,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,MaskedAddress.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,UnauthorizedErrordetailInner.SourceTypeEnum,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,JoseHeader.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,ConfirmationRequest.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,IdentityProvider,61,0,4,0,14,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutResponsePayload,640,0,70,0,120,0,71,0,36,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,SrcTokenResultsDataObject.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerError.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,InternalServerError.ReasonEnum,173,0,4,0,30,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,CheckoutResponseJWS,332,0,30,0,70,0,36,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,EventHistory.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.confirmations.model,DCF,413,0,50,0,75,0,49,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,JSON,93,154,8,0,31,35,15,3,11,3
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ApiClient.new HostnameVerifier() {...},8,0,0,0,2,0,2,0,2,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ApiClient.new Interceptor() {...},28,6,2,0,8,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ApiClient.new X509TrustManager() {...},11,0,0,0,4,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ApiClient.new Callback() {...},65,0,0,0,13,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ProgressRequestBody.new ForwardingSink() {...},51,0,4,0,9,0,4,0,2,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,StringUtil,101,0,18,0,22,0,13,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ApiResponse,27,0,0,0,10,0,5,0,5,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ServerVariable,15,0,0,0,6,0,1,0,1,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ApiClient,1989,149,247,1,435,36,197,10,73,10
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ServerConfiguration,66,12,10,0,13,5,7,1,2,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,Configuration,13,0,0,0,5,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,GzipRequestInterceptor.new RequestBody() {...},27,0,0,0,5,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,GzipRequestInterceptor.new RequestBody() {...},28,0,0,0,7,0,4,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,GzipRequestInterceptor,57,0,4,0,13,0,6,0,4,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,JSON.OffsetDateTimeTypeAdapter,49,10,6,0,13,5,6,2,3,2
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,Pair,45,0,6,0,19,0,9,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,JSON.LocalDateTypeAdapter,36,10,4,0,11,5,5,2,3,2
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ProgressResponseBody,37,0,2,0,10,0,6,0,5,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ProgressRequestBody,35,0,0,0,11,0,5,0,5,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,JSON.ByteArrayAdapter,32,3,4,0,10,1,4,1,2,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,JSON.SqlDateTypeAdapter,72,3,8,0,21,1,8,1,4,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ProgressResponseBody.new ForwardingSource() {...},46,0,4,0,6,0,4,0,2,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,ApiException,110,41,0,0,18,13,8,5,8,5
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker,JSON.DateTypeAdapter,74,3,8,0,23,1,8,1,4,1
+clicktopay-reference-app,com.mastercard.mcs.clicktopay,ClickToPayReferenceApplication,0,8,0,0,0,3,0,2,0,2
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.api,MerchantRegistrationApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.api,MerchantRegistrationApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.api,MerchantRegistrationApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.api,MerchantRegistrationApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.api,MerchantRegistrationApi,424,6,32,0,98,3,33,1,17,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Address.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaBatchStatus.BatchStatusEnum,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaBatchStatus.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,BatchStatusItems.StatusEnum,68,0,4,0,15,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Error.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaAddUpdateRequest,314,29,38,0,59,9,36,2,17,2
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,BatchStatusItems.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AddUpdateItems.ProgramTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaAddUpdateRequest.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,BatchStatusItems,657,0,86,0,118,0,77,0,34,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaResults.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaAddUpdateResponse.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaBatchStatus,620,40,84,0,104,12,74,2,32,2
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AddUpdateItems.ActionEnum,39,36,4,0,8,8,5,3,3,3
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,ErrorDetail,445,0,50,0,81,0,49,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AddUpdateItems.ProgramTypeEnum,39,78,4,0,8,14,5,3,3,3
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaBatchStatus.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaAddUpdateResponse.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AcquirerData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Error,448,0,46,0,90,0,48,0,25,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,ErrorDetail.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AcquirerData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,ThreeDSDefaultData,413,0,50,0,75,0,49,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,BatchStatusItems.ActionEnum,75,0,4,0,16,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Address,681,0,82,0,115,0,77,0,36,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AddUpdateItems,745,0,84,0,132,0,79,0,37,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AddUpdateItems.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaResults.StatusEnum,68,0,4,0,15,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Dpas.HasAcquirerRelationshipEnum,39,29,4,0,8,7,5,3,3,3
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,ErrorDetail.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,ErrorDetail.ReasonEnum,103,0,4,0,20,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaResults.StatusEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,BatchStatusItems.StatusEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaResults.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AddUpdateItems.ActionEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Error.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,ThreeDSDefaultData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Error.ReasonEnum,103,0,4,0,20,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,BatchStatusItems.ActionEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,ErrorDetail.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaAddUpdateRequest.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaAddUpdateResponse,196,16,26,0,39,6,26,2,13,2
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Dpas.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AddUpdateItems.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AbstractOpenApiSchema,171,0,20,0,35,0,21,0,11,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Dpas.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Address.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Dpas.HasAcquirerRelationshipEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Error.ReasonEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaData,464,0,56,0,85,0,55,0,27,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaResults,410,0,52,0,77,0,50,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,Dpas,776,0,92,0,143,0,87,0,41,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,AcquirerData,369,0,38,0,71,0,40,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,DpaBatchStatus.BatchStatusEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,ThreeDSDefaultData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.model,BatchStatusItems.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker.auth,HttpBasicAuth,44,0,8,0,13,0,10,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker.auth,ApiKeyAuth,85,0,10,0,24,0,13,0,8,0
+clicktopay-reference-app,com.mcs.clicktopay.merchantregistration.invoker.auth,HttpBearerAuth,58,0,6,0,14,0,10,0,7,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.api,CheckoutApi,218,0,14,0,54,0,20,0,13,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.api,CheckoutApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.api,CheckoutApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Card.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ConsumerStatus.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,PhoneNumber.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Error.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DCF.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ErrorDetail.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedAddress,910,0,106,0,150,0,98,0,45,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedConsumerIdentity,337,0,34,0,70,0,38,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,IdentityProvider.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedCard.PaymentCardTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalTransactionData,435,0,50,0,83,0,52,0,27,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ComplianceSettings.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,PhoneNumber.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,SrcTokenResultsData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DynamicData,358,0,40,0,69,0,41,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardFeatureContentType.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DynamicDataType,68,0,4,0,15,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ErrorDetail.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutResponseJWSPayload.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutRequest.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutResponseJWSPayload.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ErrorSourceType.Adapter,12,3,0,0,4,1,2,1,2,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ErrorDetail,409,0,46,0,79,0,47,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ConsumerIdentityType,75,0,4,0,16,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,IdentityProvider,61,0,4,0,14,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Address.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,JoseHeader,488,0,42,0,94,0,48,0,27,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardFeature.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardData,555,0,62,0,105,0,65,0,34,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,SrcTokenResultsData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CommunicationsConsent.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,JoseHeader.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutResponse.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutResponseJWS,292,40,30,0,57,13,33,3,18,3
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardFeature.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ErrorSourceType,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DynamicDataType.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,VerificationData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardStatus.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedConsumerIdentity.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Address.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutResponseJWS.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,RequestAddress,480,0,58,0,85,0,56,0,27,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutResponseJWS.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,AssuranceData,312,0,40,0,64,0,39,0,19,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ConsumerIdentityType.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutResponse.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ApplicationType.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,SrcTokenResultsData,279,0,34,0,55,0,35,0,18,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedConsumer.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutRequest,523,56,56,0,97,16,59,2,31,2
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,VerificationType.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CardPendingEvent,75,0,4,0,16,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutResponse,195,29,23,1,38,11,23,4,11,4
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Payload.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,PaymentToken,374,0,42,0,70,0,42,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,JoseHeader.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Consent,346,0,42,0,65,0,42,0,21,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,PaymentToken.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DynamicData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalTransactionData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,VerificationData,492,0,46,0,96,0,51,0,28,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ErrorDetailReason.Adapter,12,3,0,0,4,1,2,1,2,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DynamicData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,PaymentToken.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Address,882,0,106,0,145,0,98,0,45,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DCF.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Consent.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalTransactionData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardFeatureContentType,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CommunicationsConsent.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CardPendingEvent.Adapter,15,0,0,0,5,0,3,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedConsumer.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,RequestAddress.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedAddress.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ErrorDetailReason,208,0,4,0,35,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedConsumer,1037,0,114,0,180,0,111,0,54,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedCard.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardStatus,75,0,4,0,16,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,AssuranceData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedCard.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedAddress.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,VerificationData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Error.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,PhoneNumber,302,0,30,0,61,0,33,0,18,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutRequest.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CommunicationsConsent,373,0,30,0,83,0,45,0,30,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Consent.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ComplianceSettings,400,0,48,0,85,0,51,0,27,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DCF,397,0,48,0,75,0,48,0,24,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,CheckoutResponseJWSPayload,640,0,70,0,120,0,71,0,36,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ApplicationType,82,0,4,0,17,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,AbstractOpenApiSchema,171,0,20,0,35,0,21,0,11,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Payload.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedCard.PaymentCardTypeEnum,89,0,4,0,18,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Error,390,54,46,0,71,18,42,6,19,6
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,AssuranceData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,VerificationType,61,0,4,0,14,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,RequestAddress.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Card.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedConsumerIdentity.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ConsumerStatus,75,0,4,0,16,0,8,0,6,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,MaskedCard,1357,0,150,0,234,0,142,0,67,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Card,760,0,88,0,130,0,83,0,39,0
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,Payload,714,56,92,0,129,16,89,2,43,2
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,ComplianceSettings.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+clicktopay-reference-app,com.mcs.clicktopay.checkout.model,DigitalCardFeature,429,0,40,0,86,0,47,0,27,0
+clicktopay-reference-app,com.mastercard.mcs.clicktopay.exception,GlobalExceptionHandler,0,50,0,0,0,12,0,5,0,5

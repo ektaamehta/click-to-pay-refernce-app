@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mastercard.mcs.clicktopay.service.MasterCardCommonServiceTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.076 s -- in com.mastercard.mcs.clicktopay.service.MasterCardCommonServiceTest

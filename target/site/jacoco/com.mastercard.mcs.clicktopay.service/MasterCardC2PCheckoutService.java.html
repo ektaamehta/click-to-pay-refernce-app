@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MasterCardC2PCheckoutService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">clicktopay-reference-app</a> &gt; <a href="index.source.html" class="el_package">com.mastercard.mcs.clicktopay.service</a> &gt; <span class="el_source">MasterCardC2PCheckoutService.java</span></div><h1>MasterCardC2PCheckoutService.java</h1><pre class="source lang-java linenums">package com.mastercard.mcs.clicktopay.service;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
+import java.security.GeneralSecurityException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.mastercard.developer.encryption.EncryptionException;
+import com.mastercard.developer.encryption.JweEncryption;
+import com.mastercard.developer.oauth.OAuth;
+import com.mastercard.mcs.clicktopay.constants.AppConstants;
+import com.mcs.clicktopay.checkout.api.CheckoutApi;
+import com.mcs.clicktopay.checkout.invoker.ApiException;
+import com.mcs.clicktopay.checkout.model.CheckoutRequest;
+import com.mcs.clicktopay.checkout.model.CheckoutResponse;
+import com.mcs.clicktopay.checkout.model.CheckoutResponseJWS;
+import com.mcs.clicktopay.checkout.model.CheckoutResponseJWSPayload;
+import com.mcs.clicktopay.checkout.model.Payload;
+import com.nimbusds.jose.JWSObject;
+
+@Service
+<span class="fc" id="L35">public class MasterCardC2PCheckoutService extends MasterCardCommonService {</span>
+
+<span class="fc" id="L37">    private final RestTemplate restTemplate = new RestTemplate();</span>
+<span class="fc" id="L38">    private final Gson gson = new Gson();</span>
+
+    /*
+     * You can use this method to fetch transaction credentials for the selected
+     * card from Click to Pay.
+     * 
+     * Note: This currently does not work as is, due to the limitations of the
+     * Mastercard client-encryption library.
+     * And the way the Click to Pay Checkout API YAML is structured. Due to this,
+     * the other method is being used.
+     */
+    public CheckoutResponse fetchTransactionCredentials(CheckoutRequest request, String flowId, String responseHost)
+            throws IOException, GeneralSecurityException, ApiException, EncryptionException {
+<span class="fc" id="L51">        CheckoutApi api = new CheckoutApi(getCheckoutApiClient());</span>
+        
+<span class="fc" id="L53">        return api.postTransactionCredentials(request, flowId, responseHost);</span>
+    }
+
+    public ResponseEntity&lt;Object&gt; customFetchTransactionCredentials(
+            CheckoutRequest request, String flowId, String responseHost)
+            throws URISyntaxException, IOException, GeneralSecurityException {
+
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        String route = production ? productionBaseUrl : sandboxBaseUrl;</span>
+<span class="fc" id="L61">        route = route + &quot;/api/digital/payments/transaction/credentials&quot;;</span>
+<span class="fc" id="L62">        URI uri = new URI(route);</span>
+
+<span class="fc" id="L64">        HttpHeaders requestHttpHeaders = new HttpHeaders();</span>
+<span class="fc" id="L65">        requestHttpHeaders.setContentType(MediaType.APPLICATION_JSON);</span>
+
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        if (flowId != null) {</span>
+<span class="fc" id="L68">            requestHttpHeaders.add(&quot;X-Src-Cx-Flow-Id&quot;, flowId);</span>
+        }
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (responseHost != null) {</span>
+<span class="fc" id="L71">            requestHttpHeaders.add(&quot;X-Src-Response-Host&quot;, responseHost);</span>
+<span class="fc" id="L72">            requestHttpHeaders.add(&quot;SRC-DSA-Id&quot;, srcDpaId);</span>
+        }
+
+<span class="fc" id="L75">        String payload = gson.toJson(request);</span>
+
+<span class="fc" id="L77">        String authHeader = OAuth.getAuthorizationHeader(</span>
+                uri,
+<span class="fc" id="L79">                HttpMethod.POST.name(),</span>
+                payload,
+                StandardCharsets.UTF_8,
+                consumerKey,
+<span class="fc" id="L83">                getSigningKey());</span>
+
+<span class="fc" id="L85">        requestHttpHeaders.add(OAuth.AUTHORIZATION_HEADER_NAME, authHeader);</span>
+
+<span class="fc" id="L87">        HttpEntity&lt;String&gt; entity = new HttpEntity&lt;&gt;(payload, requestHttpHeaders);</span>
+
+        try {
+<span class="fc" id="L90">            ResponseEntity&lt;String&gt; responseEntity = restTemplate.postForEntity(uri, entity, String.class);</span>
+
+<span class="fc" id="L92">            String responseBody = responseEntity.getBody();</span>
+
+<span class="fc" id="L94">            Map&lt;String, Object&gt; checkoutResponseMap = gson.fromJson(responseBody, new TypeToken&lt;Map&lt;String, Object&gt;&gt;() {</span>
+            });
+<span class="fc" id="L96">            JWSObject jwsObject = JWSObject.parse(checkoutResponseMap.get(&quot;checkoutResponseJWS&quot;).toString());</span>
+<span class="fc" id="L97">            Map&lt;String, Object&gt; jwsResponsePayload = jwsObject.getPayload().toJSONObject();</span>
+
+<span class="fc" id="L99">            String decryptedPayload = JweEncryption.decryptPayload(gson.toJson(jwsResponsePayload),</span>
+<span class="fc" id="L100">                    getDecryptionConfig());</span>
+
+<span class="fc" id="L102">            jwsResponsePayload.put(&quot;encryptedPayload&quot;, gson.fromJson(decryptedPayload, Payload.class));</span>
+
+<span class="fc" id="L104">            CheckoutResponse checkoutResponse = new CheckoutResponse();</span>
+<span class="fc" id="L105">            CheckoutResponseJWS checkoutResponseJWS = new CheckoutResponseJWS();</span>
+<span class="fc" id="L106">            CheckoutResponseJWSPayload checkoutResponseJWSPayload = gson.fromJson(gson.toJson(jwsResponsePayload),</span>
+                    CheckoutResponseJWSPayload.class);
+
+<span class="fc" id="L109">            checkoutResponseJWS.setJwsPayload(checkoutResponseJWSPayload);</span>
+<span class="fc" id="L110">            checkoutResponse.setCheckoutResponseJWS(checkoutResponseJWS);</span>
+
+            // Build response map for client (SonarQube: use getStatusCode().value())
+<span class="fc" id="L113">            Map&lt;String, Object&gt; result = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L114">            result.put(AppConstants.KEY_BODY, checkoutResponse);</span>
+<span class="fc" id="L115">            result.put(AppConstants.KEY_HEADERS, responseEntity.getHeaders());</span>
+<span class="fc" id="L116">            result.put(AppConstants.KEY_STATUS_CODE, responseEntity.getStatusCode().value());</span>
+
+<span class="fc" id="L118">            return ResponseEntity.status(responseEntity.getStatusCode()).body(result);</span>
+<span class="fc" id="L119">        } catch (org.springframework.web.client.HttpStatusCodeException ex) {</span>
+            // Handles 4xx and 5xx HTTP errors from RestTemplate
+<span class="fc" id="L121">            Map&lt;String, Object&gt; error = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L122">            error.put(AppConstants.KEY_BODY, ex.getResponseBodyAsString());</span>
+<span class="fc" id="L123">            error.put(AppConstants.KEY_HEADERS, ex.getResponseHeaders());</span>
+<span class="fc" id="L124">            error.put(AppConstants.KEY_STATUS_CODE, ex.getStatusCode().value());</span>
+
+<span class="fc" id="L126">            return ResponseEntity.status(ex.getStatusCode()).body(error);</span>
+<span class="fc" id="L127">        } catch (Exception e) {</span>
+            // Handles all other errors (parsing, logic, etc.)
+<span class="fc" id="L129">            Map&lt;String, Object&gt; error = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L130">            error.put(AppConstants.KEY_BODY, e.getMessage());</span>
+<span class="fc" id="L131">            error.put(AppConstants.KEY_HEADERS, null);</span>
+<span class="fc" id="L132">            error.put(AppConstants.KEY_STATUS_CODE, 500);</span>
+
+<span class="fc" id="L134">            return ResponseEntity.status(500).body(error);</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

@@ -1,0 +1,10 @@
+com/mastercard/mcs/clicktopay/ClickToPayReferenceApplicationTest.class
+com/mastercard/mcs/clicktopay/exception/GlobalExceptionHandlerTest.class
+com/mastercard/mcs/clicktopay/controller/ConfirmationControllerTest.class
+com/mastercard/mcs/clicktopay/controller/ConfigControllerTest.class
+com/mastercard/mcs/clicktopay/controller/CheckoutControllerTest.class
+com/mastercard/mcs/clicktopay/service/MasterCardC2PConfirmationServiceTest.class
+com/mastercard/mcs/clicktopay/service/MasterCardC2PCheckoutServiceTest.class
+com/mastercard/mcs/clicktopay/service/MasterCardCommonServiceTest.class
+com/mastercard/mcs/clicktopay/controller/MerchantRegistrationControllerTest.class
+com/mastercard/mcs/clicktopay/service/MasterCardC2PMerchantRegistrationServiceTest.class
